@@ -4,22 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiOutlineHome } from "react-icons/hi2";
+import { IoExtensionPuzzle } from "react-icons/io5";
+import { ArrowUpRightFromSquare } from "lucide-react";
+import { IoLogOut } from "react-icons/io5";
 
 const SideBar = () => {
   const path = usePathname();
 
   const Menu = [
     { id: 1, name: "Home", icon: <HiOutlineHome />, path: "/dashboard" },
-    { id: 2, name: "Explore", icon: <HiOutlineHome />, path: "/dashboard/explore" },
-    { id: 3, name: "Upgrade", icon: <HiOutlineHome />, path: "/dashboard/upgrade" },
-    { id: 4, name: "Logout", icon: <HiOutlineHome />, path: "/dashboard/logout" },
+    { id: 2, name: "Explore", icon: <IoExtensionPuzzle/>, path: "/dashboard/explore" },
+    { id: 3, name: "Upgrade", icon: <ArrowUpRightFromSquare />, path: "/dashboard/upgrade" },
+    { id: 4, name: "Logout", icon: <IoLogOut />, path: "/dashboard/logout" },
   ];
 
   return (
     <div className="fixed h-full md:w-64 p-5 shadow-md flex flex-col justify-between">
       {/* Logo */}
       <div>
-        <Image src="/next.svg" width={100} height={50} alt="Next.js Logo" />
+        <Image src="/logo.png" width={50} height={30} alt="Next.js Logo" />
         <hr className="my-5" />
         <ul>
           {Menu.map((item) => (

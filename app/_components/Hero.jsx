@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React from 'react'
+import { Button } from '../../components/ui/button'
 
 function Hero() {
   return (
@@ -11,17 +13,15 @@ function Hero() {
       </h1>
 
       <p className="mt-4 sm:text-xl/relaxed">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-        numquam ea!
+        Create your own AI course with the help of our AI course generator. Share it with friends and earn
+        from it.
       </p>
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          className="block w-full rounded-sm bg-blue-400 px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-red-700 focus:ring-3 focus:outline-hidden sm:w-auto"
-          href="#"
-        >
-          Get Started
-        </a>
+        <Link href={'/dashboard'}>
+         <Button className='p-5 cursor-pointer'>Get Started</Button>
+         
+        </Link>
 
        
       </div>

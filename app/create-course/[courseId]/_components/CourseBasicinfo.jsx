@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "../../../../components/ui/button.jsx"; // Ensure correct path
 import { HiOutlinePuzzlePiece } from "react-icons/hi2";
+import Link from "next/link.js";
 
 const CourseBasicInfo = ({ course }) => {
   if (!course) return <p className="text-center text-gray-500">Course data not available.</p>;
@@ -21,17 +22,18 @@ const CourseBasicInfo = ({ course }) => {
           <h2 className="font-medium mt-2 flex gap-2 items-center">
             <HiOutlinePuzzlePiece /> {course?.category || "No category"}
           </h2>
-
-          <Button className="w-full mt-5">Start</Button>
+          <Link href={`/course/${course?.courseId}/start`}>
+          <Button className="w-full mt-5 cursor-pointer">Start</Button>
+          </Link>
         </div>
 
         {/* Right Side - Course Image */}
         <div>
           <Image
-            src={course?.image || "/window.svg"} // ✅ Fallback image
-            width={300}
-            height={250}
-            className="w-full rounded-xl h-[250px] object-cover"
+            src={course?.image || "/programming.svg"} // ✅ Fallback image
+            width={250}
+            height={200}
+            className="w-full rounded-xl h-[320px] object-cover"
             alt="Course Image"
           />
         </div>

@@ -12,3 +12,12 @@ export const CourseList = pgTable('courseList', {
   userName: varchar('userName').notNull(),       // Fixed missing parenthesis
   userProfileImage: varchar('userProfileImage')  // Fixed missing parenthesis
 });
+
+export const Chapters = pgTable('chapters', {
+  id: serial('id').primaryKey(),
+  courseId: varchar('courseId').notNull(),
+  chapterId: varchar('chapterId').notNull(),
+  content: json('content').notNull(),
+  videoId: varchar('videoId').notNull(),
+ 
+});
