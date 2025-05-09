@@ -4,7 +4,7 @@ import { db } from "../../../configs/db";
 import { CourseList } from "../../../configs/schema";
 import { and, eq } from "drizzle-orm";
 import CourseBasicInfo from '../../create-course/[courseId]/_components/CourseBasicinfo';
-import Header from '../../_components/Header';
+import Header from '../../../app/_components/Header';
 import CourseDetail from '../../create-course/[courseId]/_components/CourseDetail';
 import ChapterList from '../../create-course/[courseId]/_components/ChapterList';
 

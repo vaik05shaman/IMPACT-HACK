@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Header from "../dashboard/_components/Header.jsx";
+
+import Header from "../../app/_components/Header.jsx";
+import Footer from "../../app/_components/Footer.jsx";
 import { UserInputContext } from "../_context/UserInputContext.jsx";
 
 const CreateCourseLayout = ({ children }) => {
@@ -11,7 +13,9 @@ const CreateCourseLayout = ({ children }) => {
     <UserInputContext.Provider value={{ userCourseInput, setUserCourseInput }}>
       <Header />
       {children}
+      <Footer/>
     </UserInputContext.Provider>
+
   );
 };
 
